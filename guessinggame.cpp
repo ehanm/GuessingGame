@@ -1,7 +1,6 @@
 // This program is a guessing game! The user must guess a number between 0-100!
 // Made by Ehan Masud on September 14, 2021
 #include <iostream>
-#include <string>
 using namespace std;
 int main() {
   while (true){ // looping the program
@@ -24,12 +23,14 @@ int main() {
       cin >> guess;
     }
     cout << "You got it!\n";
-    string guessconverted = to_string(guesses+1);
-    cout << "It took you " + guessconverted + " guesses!\n";
+    guesses++;
+    cout << "It took you ";
+    cout << guesses;
+    cout << " guesses!\n";
     cout << "Play again? (y/n)"; // gets player input on whether they want to play the game again or not
-    string response;
+    char response;
     cin >> response;
-    if (response == "y") {
+    if (response == 'y') {
       continue; // if the player types "y", then the game starts over
     }
     else {
